@@ -72,7 +72,7 @@
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
-         <string>FileData</string>
+         <string>Data Info</string>
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_31">
          <item>
@@ -2638,7 +2638,7 @@
          </sizepolicy>
         </property>
         <attribute name="title">
-         <string>EC movies</string>
+         <string>EC Movies</string>
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_35">
          <property name="spacing">
@@ -2670,19 +2670,19 @@
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_16">
              <property name="spacing">
-              <number>1</number>
+              <number>2</number>
              </property>
              <property name="leftMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="topMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="bottomMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <item>
               <layout class="QVBoxLayout" name="ecmoviesLayout1"/>
@@ -2698,19 +2698,19 @@
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_18">
              <property name="spacing">
-              <number>1</number>
+              <number>2</number>
              </property>
              <property name="leftMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="topMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="bottomMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <item>
               <layout class="QVBoxLayout" name="ecmoviesLayout2"/>
@@ -2726,19 +2726,19 @@
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_20">
              <property name="spacing">
-              <number>1</number>
+              <number>2</number>
              </property>
              <property name="leftMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="topMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="bottomMargin">
-              <number>1</number>
+              <number>0</number>
              </property>
              <item>
               <layout class="QVBoxLayout" name="ecmoviesLayout3"/>
@@ -2751,7 +2751,7 @@
        </widget>
        <widget class="QWidget" name="ecmapsTab">
         <attribute name="title">
-         <string>EC maps</string>
+         <string>EC Maps</string>
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_37">
          <property name="spacing">
@@ -2774,14 +2774,89 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <widget class="QWidget" name="verticalLayoutWidget">
-            <layout class="QVBoxLayout" name="ecmapsLayout1"/>
+           <widget class="QFrame" name="frame_5">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_21">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="ecmapsLayout1"/>
+             </item>
+            </layout>
            </widget>
-           <widget class="QWidget" name="verticalLayoutWidget_2">
-            <layout class="QVBoxLayout" name="ecmapsLayout2"/>
+           <widget class="QFrame" name="frame_6">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_33">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="ecmapsLayout2"/>
+             </item>
+            </layout>
            </widget>
-           <widget class="QWidget" name="verticalLayoutWidget_3">
-            <layout class="QVBoxLayout" name="ecmapsLayout3"/>
+           <widget class="QFrame" name="frame_7">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_36">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="ecmapsLayout3"/>
+             </item>
+            </layout>
            </widget>
           </widget>
          </item>
@@ -2789,9 +2864,9 @@
        </widget>
        <widget class="QWidget" name="ecdataTab">
         <attribute name="title">
-         <string>EC plots</string>
+         <string>EC Plots</string>
         </attribute>
-        <layout class="QVBoxLayout" name="verticalLayout_21">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
          <property name="spacing">
           <number>2</number>
          </property>
@@ -2808,99 +2883,95 @@
           <number>2</number>
          </property>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_3">
-           <item>
-            <widget class="QSplitter" name="splitter_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+          <widget class="QSplitter" name="splitter_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <widget class="QFrame" name="frame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_25">
+             <property name="spacing">
+              <number>2</number>
              </property>
-             <widget class="QFrame" name="frame">
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_25">
-               <property name="spacing">
-                <number>2</number>
-               </property>
-               <property name="leftMargin">
-                <number>0</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
-                <number>0</number>
-               </property>
-               <item>
-                <layout class="QVBoxLayout" name="ecdataLayout1"/>
-               </item>
-              </layout>
-             </widget>
-             <widget class="QFrame" name="frame_3">
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_26">
-               <property name="spacing">
-                <number>2</number>
-               </property>
-               <property name="leftMargin">
-                <number>0</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
-                <number>0</number>
-               </property>
-               <item>
-                <layout class="QVBoxLayout" name="ecdataLayout2"/>
-               </item>
-              </layout>
-             </widget>
-             <widget class="QFrame" name="frame_2">
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_27">
-               <property name="spacing">
-                <number>2</number>
-               </property>
-               <property name="leftMargin">
-                <number>0</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
-                <number>0</number>
-               </property>
-               <item>
-                <layout class="QVBoxLayout" name="ecdataLayout3"/>
-               </item>
-              </layout>
-             </widget>
-            </widget>
-           </item>
-          </layout>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="ecdataLayout1"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QFrame" name="frame_3">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_26">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="ecdataLayout2"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QFrame" name="frame_2">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_27">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="ecdataLayout3"/>
+             </item>
+            </layout>
+           </widget>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -2962,8 +3033,8 @@
  </resources>
  <connections/>
  <buttongroups>
-  <buttongroup name="buttonGroup"/>
   <buttongroup name="buttonGroup_3"/>
   <buttongroup name="buttonGroup_2"/>
+  <buttongroup name="buttonGroup"/>
  </buttongroups>
 </ui>

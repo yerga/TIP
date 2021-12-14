@@ -1,7 +1,9 @@
-#yerga's scripts
+#yerga's scripts and files
 scripts/convertUI.py
 .vscode
 .DS_Store
+.qt_for_python
+*.log.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
