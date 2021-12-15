@@ -48,15 +48,10 @@ def get_exp_settings(filename):
     datasettings["nchannels"] = len(savedchannels)
 
     # Extract useful parameters and its values from the .set file
-    localsettings_params = []
-    localsettings_values = []
     #TODO: think a better way to extract these values
     for item in localsettings:
         param, value = extract_param_and_value(item)
         #print(param, value)
-        localsettings_params.append(param) #TODO: check if this is used later, might be useful or not
-        localsettings_values.append(value)
-
         if "X Width" in param:
             datasettings["xwidth"] = "{:.1f}".format(float(value))
         elif "Y Width" in param:
@@ -78,11 +73,11 @@ def get_exp_settings(filename):
             datasettings["sampletime"] = "{:d}".format(int(float(value)))
         elif "Samples per Data Point" in param:
             datasettings["samplespdp"] = "{:d}".format(int(float(value)))
-
+        
     # Detect if the labview program is from an old or newer version
-    #TODO: a better more automatic way to detect this, look at old and new .set files
-    if datasettings["labvprogram"] == "Scan_Hopping Multiple CVs at Surface.vi":
-        datasettings["oldlabview"] = True 
+    # Looks like "Use 10 Channel" option is only available in old versions
+    #TODO: check if this is consistent for different labview programs
+    datasettings["oldlabview"] = bool([i for i, e in enumerate(globalsettings) if "Use 10 Channel" in e])
 
     # Making the text nicer to show it in the GUI
     for i in range(len(localsettings)):

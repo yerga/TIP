@@ -6,6 +6,7 @@ from PyQt5.QtCore import QSettings
 from tips.ui.ui_mainwindow import Ui_MainWindow
 from tips.ui.ui_utils import getFileName
 from tips.datareading.read_settings import get_exp_settings
+from tips.datareading.channels import get_channel_indexes
 
 APPVERSION = "0.1.0"
 APPNAME = "Tips - Electrochemical Imaging Analysis"
@@ -80,9 +81,13 @@ class MainWindow(QMainWindow):
         self.YchannelLE = self.ui.YCN_LE
         self.ZchannelLE = self.ui.ZCN_LE
         self.C1channelLE = self.ui.C1CN_LE
+        self.C2channelLE = self.ui.C2CN_LE
         self.V1channelLE = self.ui.V1CN_LE
+        self.V2channelLE = self.ui.V2CN_LE
         self.LNchannelLE = self.ui.LNCN_LE
         self.DTchannelLE = self.ui.DTCN_LE
+        self.channel_widgets = [self.XchannelLE, self.YchannelLE, self.ZchannelLE, self.C1channelLE, 
+            self.C2channelLE, self.V1channelLE, self.V2channelLE, self.LNchannelLE, self.DTchannelLE]
 
 
     def quitApp(self):
@@ -101,20 +106,27 @@ class MainWindow(QMainWindow):
 
 
     def set_settings_to_gui(self):
+        "Read settings from data files and add info to the GUI widgets"
         self.filenameLE.setText(self.filename)
         allsettings, datasettings = get_exp_settings(self.filename)
         localsettings, globalsettings, savedchannels = allsettings
         
-        self.xwidthLE.setText(datasettings["xwidth"])
-        self.ywidthLE.setText(datasettings["ywidth"])
-        self.hopdistanceLE.setText(datasettings["hopdistance"])
+        self.xwidthLE.setText(str(datasettings["xwidth"]))
+        self.ywidthLE.setText(str(datasettings["ywidth"]))
+        self.hopdistanceLE.setText(str(datasettings["hopdistance"]))
         self.nchannelsLE.setText(str(datasettings["nchannels"]))
-        self.cyclesLE.setText(datasettings["ncycles"])
+        self.cyclesLE.setText(str(datasettings["ncycles"]))
         self.labviewprogramCBox.setCurrentText(datasettings["labvprogram"])
         self.acquisition_rate = int(datasettings["sampletime"]) * (int(datasettings["samplespdp"]) + 1) #in us
+        #FIXME: if acquisition rate = 0 --> extract dt from data file
         self.acqrateLE.setText(str(self.acquisition_rate))
 
         self.localsettingsTE.setText(localsettings)
         self.globalsettingsTE.setText(globalsettings)
         self.channelsTE.setText(savedchannels)
+
+        # Extract indexes from data channels and put into the GUI widgets
+        self.data_channels = get_channel_indexes(datasettings, savedchannels)
+        for i in range(len(self.channel_widgets)):
+            self.channel_widgets[i].setText(str(self.data_channels[i]))
 
